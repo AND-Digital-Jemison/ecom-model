@@ -1,0 +1,9 @@
+# Overview
+
+![diagram](https://www.plantuml.com/plantuml/svg/0/RL51Ri8m4Bpx5MvEGIh9fQUUg4AajYeb8b2ffyWuIsBLiIDx7U3tjGEK8d7oUcPsFJkUMMG6NIV9Wr1SkXfeYzZRvpGrR9yq0bktTHOCrmf1OS9rbxBQ2AO6wNgNPa_JGZA5cyL7AXc2HGzLML0VCEd3P49Ut-PvLQxpLRvSVnTvF26a06ErYdkh7cbqkaI-6eGLg0r5JR45QdqDqOIKHulGnOC3h_boC1s9dV7FX2u3jjVAYW7e7hQq32GzivVcAZzWp3lKMbhVakckyri1NGSW32cChXr7J_P6SF2dw5W3bYP94jrCORBn-XVPQ2bOQ2s16TxUYeB3urRgdy1VwY3E5kMjaglTQ6WCUEVaLKHM8AlvAQJpxY4V-vTBu3VNhKwQztBv-SUDNk_W_-pTOKTBDpYPWQhzR_u2)
+
+
+**Overview**
+
+Users interacts with vue-storefront, they can browse and search the products that are being listed from commercetools and searched by algolia.
+
