@@ -1,0 +1,20 @@
+{
+  "name": "ecom-model",
+  "version": "1.0.0",
+  "description": "c4 container model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AND-Digital-Jemison/ecom-model.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AND-Digital-Jemison/ecom-model/issues"
+  },
+  "homepage": "https://github.com/AND-Digital-Jemison/ecom-model#readme"
+}

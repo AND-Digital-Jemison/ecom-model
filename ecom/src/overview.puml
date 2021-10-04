@@ -1,0 +1,20 @@
+@startuml
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Context.puml
+
+
+HIDE_STEREOTYPE()
+
+Person(psn, "Person", "visitor to the store")
+System(vue, "Vue-storefront", "responsive web Store front",)
+System_Ext(cmtools, "Commerce Tools", "Products, prices, images ...")
+System_Ext(alg, "Algolia", "Search")
+System_Ext(storyblok, "Storyblok", "CMS")
+System_Ext(cnf, "Contentful", "CMS")
+
+Rel_D(psn, vue, "Visits store")
+Rel_U(cmtools, vue, "JSON")
+Rel_U(alg, vue, "JSON")
+Rel_U(storyblok, vue, "JSON")
+Rel_U(cnf, vue, "JSON")
+
+@enduml

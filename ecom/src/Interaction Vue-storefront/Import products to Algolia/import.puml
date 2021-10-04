@@ -1,0 +1,21 @@
+@startuml
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Component.puml
+
+
+
+Container(script, "Import script", "nodeJS", "Gets token, calls commercetools APIs, gets products and categories, import data to Algolia")
+Container(alg, "Algolia Search ", "Search engine, gets data for indexing")
+
+
+Container_Boundary(ct, "Commerce Tools") {
+    Component(pAPI, "Product API", "Products, prices, images, category ID ...")
+    Component(cAPI, "Categories API", "category ID, category name ...")
+    Component(aAPI, "Auth API", "auth token")
+}
+
+BiRel(script, aAPI, "Token", "Bearer token")
+BiRel(script, pAPI, "use token, gets products", "JSON")
+BiRel(script, cAPI, "use token, gets categories", "JSON")
+Rel_R(script, alg, "format all data to required JSON and sends for indexing", "JSON")
+
+@enduml

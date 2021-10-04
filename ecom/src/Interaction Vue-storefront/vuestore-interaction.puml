@@ -1,0 +1,29 @@
+@startuml
+!include https://raw.githubusercontent.com/adrianvlupu/C4-PlantUML/latest/C4_Context.puml
+
+HIDE_STEREOTYPE()
+
+
+System(vue, "Vue-storefront", "responsive web Store front")
+System(cmtools, "Commerce Tools", "Products, prices, images ...")
+System(alg, "Algolia", "Search")
+System(storyblok, "Storyblok", "CMS")
+System(cnf, "Contentful", "CMS")
+System_Ext(scr, "external Script, API calls, format JSON data")
+
+Lay_R(vue, cmtools)
+Lay_D(vue, cnf)
+Lay_D(vue, alg)
+Lay_D(vue, storyblok)
+Lay_D(cmtools, scr)
+
+BiRel(cmtools, vue, "Products listed")
+BiRel(vue, alg, "Search query")
+BiRel(alg, vue, "JSON formatted response")
+Rel(storyblok, vue, "CMS serves text and imgs fro static website")
+Rel(cnf, vue, "CMS linked to text only -  POC")
+Rel(cnf, cmtools, "CMS linked with products")
+BiRel(scr, cmtools, "API calls for token, product, categories")
+BiRel(scr, alg, "push data to be indexed by Algolia")
+
+@enduml
